@@ -1,0 +1,22 @@
+#  Get all Data
+# GET http://localhost:3000/api/todos
+
+#  Get one data
+# GET http://localhost:3000/api/todos
+
+# # create 1 data
+# POST http://localhost:3000/api/todos
+# Content-Type: application/json
+
+# {
+# "title": "hello world 122"
+# }
+
+
+#  update data 
+PUT http://localhost:3000/api/todos/1
+Content-Type: application/json
+
+{
+    "title" : "hello world22"
+}
