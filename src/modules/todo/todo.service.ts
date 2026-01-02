@@ -12,10 +12,10 @@ export const todoService = {
         return todos.find(t => t.id === id )
     },
 
-    create(tittle :string) {
+    create(title :string) {
         const todo:Todo = {
             id: nextId++,
-            tittle,
+            title,
             competed : false
         }
         // push todo data
@@ -25,9 +25,13 @@ export const todoService = {
     },
 
     update(id : number,  data:Partial<Todo>) {
-        const todo = this.findById(id)
+        const todo = this.findById(id)  
+  
+        
         if (!todo) return null 
         Object.assign(todo,data)
+      
+        
         return todo
     },
 

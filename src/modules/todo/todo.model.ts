@@ -1,5 +1,5 @@
 export type Todo = {
     id : Number,
-    tittle : string,
+    title : string,
     competed : boolean
 }

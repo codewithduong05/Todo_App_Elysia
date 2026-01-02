@@ -12,7 +12,6 @@ export const todoController = {
 
     create(body :{title :string}) {
         const todo = todoService.create(body.title)
-        console.log(todo);
         
         return successResponse(
             todo,

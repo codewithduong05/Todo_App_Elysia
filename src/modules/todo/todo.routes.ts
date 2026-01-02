@@ -1,6 +1,6 @@
 import {Elysia} from 'elysia'
 import { todoController } from './todo.controller'
-import { createTodoSchema, updateTodoSchema } from './todo.schema'
+import { createTodoSchema, patchTodoSchema, updateTodoSchema } from './todo.schema'
 
 
 export const todoRoutes = new Elysia({prefix : "/todos"})
@@ -27,6 +27,6 @@ export const todoRoutes = new Elysia({prefix : "/todos"})
     .patch(
         "/:id",
         ({params,body}) =>
-            todoController.update(Number(params.id),body)
-        
+            todoController.update(Number(params.id),body),
+        patchTodoSchema
     )
